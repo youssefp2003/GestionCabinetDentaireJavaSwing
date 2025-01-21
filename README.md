@@ -1,118 +1,165 @@
-# **Dental Clinic Management System**  
-A robust Java-based desktop application designed to streamline dental clinic operations, including managing appointments, patient records, and staff authentication.
+---
+
+# 🦷 **Dental Clinic Management System**
+
+A comprehensive Java-based desktop application designed to simplify dental clinic operations. Manage patient records, appointments, and user authentication efficiently with an intuitive interface and robust backend.
 
 ---
 
-## **Key Features**  
+## ✨ **Features**
 
-### **Patient Management**  
-- Store, update, and retrieve patient records, including detailed medical histories.  
+### **Actors in the System**
+The application supports two key actors:
+1. **Receptionist**:
+   - Manages patient profiles, appointments, and balances.
+   - Handles scheduling and patient communications.
+2. **Dentist**:
+   - Accesses detailed patient records, including medical histories and X-ray data.
+   - Reviews and updates appointment treatments and notes.
 
-### **Appointment Scheduling**  
-- Intuitive calendar-based system for scheduling and managing appointments.  
+### **Patient Management**
+- Add, update, and retrieve detailed patient records.
+- Store medical histories, contact information, and other essential data.
+- Maintain a clean and organized patient database.
 
-### **Secure User Authentication**  
-- Multi-level secure login system for clinic staff, ensuring data confidentiality.  
+### **Appointment Scheduling**
+- Calendar-based system for intuitive appointment management.
+- Easily book, edit, or cancel appointments with a few clicks.
+- Send automated email notifications for appointment confirmations or changes.
 
-### **Modern User Interface**  
-- A clean, user-friendly interface designed with **FlatLaf Look and Feel** for a contemporary appearance.  
+### **Secure User Authentication**
+- Role-based login system ensures secure access for Receptionists and Dentists.
+- Protect sensitive patient information and clinic records.
 
-### **Email Notifications**  
-- Automated email reminders and notifications for appointment confirmations and changes.  
+### **Interactive User Interface**
+- Designed with **FlatLaf Look and Feel** for a modern, responsive UI.
+- Modular design for seamless navigation between features.
 
----
-
-## **Technologies Utilized**  
-
-- **Programming Language**: Java 23  
-- **Database**: SQLite  
-- **Build Tool**: Maven  
-- **Email Integration**: JavaMail API  
-- **Scheduling**: JCalendar  
-- **UI Styling**: FlatLaf  
-
----
-
-## **System Requirements**  
-
-To run this application, ensure the following prerequisites are met:  
-
-- **Java Development Kit (JDK)**: Version 23 or higher  
-- **Maven**: Version 3.x or later  
-- **SQLite Database**  
+### **Additional Functionalities**
+- Track unpaid balances and generate summaries.
+- Integrated email reminders to improve patient engagement.
 
 ---
 
-## **Installation Guide**  
+## 🚀 **Technologies Utilized**
 
-Follow these steps to set up and run the Dental Clinic Management System:  
-
-1. **Clone the Repository**  
-   ```bash  
-   git clone https://github.com/youssef-abdel/GestionCabinetDentaireJavaSwing.git  
-   ```  
-
-2. **Navigate to the Project Directory**  
-   ```bash  
-   cd dental-clinic-management  
-   ```  
-
-3. **Build the Project Using Maven**  
-   ```bash  
-   mvn clean install  
-   ```  
-
-4. **Run the Application**  
-   ```bash  
-   java -jar target/dental-clinic-management-1.0-SNAPSHOT.jar  
-   ```  
+- **Programming Language**: Java 11+  
+- **UI Framework**: Java Swing with FlatLaf for a polished appearance.  
+- **Database**: SQLite for lightweight and reliable storage.  
+- **Build Tool**: Maven for dependency management and project building.  
+- **Email Integration**: JavaMail API for sending notifications.  
+- **Scheduling**: JCalendar for calendar-based features.  
 
 ---
 
-## **Project Directory Structure**  
+## 📂 **Directory Structure**
 
-The project is organized into the following modules:  
-
-- **`src/main/java/com/dentalclinic/ui/`**: User Interface components  
-- **`src/main/java/com/dentalclinic/model/`**: Data models  
-- **`src/main/java/com/dentalclinic/dao/`**: Database Access Objects  
-- **`src/main/java/com/dentalclinic/util/`**: Utility classes  
-
----
-
-## **Dependencies**  
-
-The application relies on the following libraries and tools:  
-
-- **SQLite JDBC Driver**: Version 3.43.0.0  
-- **JavaMail API**: Version 1.6.2  
-- **JCalendar**: Version 1.4  
-- **FlatLaf**: Version 3.2.1  
-
----
-
-## **Contributing Guidelines**  
-
-Contributions are welcome! To contribute:  
-
-1. Fork the repository.  
-2. Create a new feature branch:  
-   ```bash  
-   git checkout -b feature/your-feature-name  
-   ```  
-3. Commit your changes:  
-   ```bash  
-   git commit -m "Add your message here"  
-   ```  
-4. Push to your branch:  
-   ```bash  
-   git push origin feature/your-feature-name  
-   ```  
-5. Open a pull request.  
+```plaintext
+gestioncabinetdentairejavaswing/
+├── README.md                     # Project documentation
+├── dental_clinic.db              # SQLite database file
+├── pom.xml                       # Maven configuration file
+└── src/
+    └── main/
+        └── java/
+            └── com/
+                └── dentalclinic/
+                    ├── DentalClinicApplication.java  # Main application entry point
+                    ├── model/
+                    │   ├── Appointment.java          # Appointment model class
+                    │   └── Patient.java              # Patient model class
+                    ├── ui/
+                    │   ├── AppointmentPanel.java     # Panel for managing appointments
+                    │   ├── CalendarPanel.java        # Calendar view for appointments
+                    │   ├── LoginDialog.java          # Login dialog for secure access
+                    │   ├── MainFrame.java            # Main application frame
+                    │   ├── PatientRecordsPanel.java  # Panel for viewing patient records
+                    │   └── PatientsPanel.java        # Panel for managing patients
+                    └── util/
+                        └── DatabaseUtil.java         # Utility class for database operations
+```
 
 ---
 
-## **License**  
+## 📦 **Installation Guide**
 
-This project is licensed under the **MIT License**. See the `LICENSE` file for full details.  
+### **Prerequisites**
+- **Java Development Kit (JDK)**: Version 11 or higher.
+- **Maven**: Version 3.x or later.
+- **SQLite**: Ensure SQLite is installed or use the provided database file (`dental_clinic.db`).
 
+### **Setup Instructions**
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/youssefp2003/GestionCabinetDentaireJavaSwing.git
+   cd gestioncabinetdentairejavaswing
+   ```
+
+2. **Build the Project**:
+   Use Maven to install dependencies and compile the application:
+   ```bash
+   mvn clean install
+   ```
+
+3. **Run the Application**:
+   Start the application using Maven:
+   ```bash
+   java -jar target/dental-clinic-management-1.0-SNAPSHOT.jar
+   ```
+
+4. **Access the Application**:
+   - Login using credentials set for **Receptionist** or **Dentist**.
+   - Begin managing patients, appointments, and clinic operations.
+
+---
+
+## 🗄️ **Database Schema**
+
+### **Patients Table**
+Stores detailed patient information, including:
+- **ID**: Unique identifier for each patient.
+- **Name**: Full name.
+- **Contact Info**: Phone and email.
+- **Medical History**: Notes on treatments and conditions.
+
+### **Appointments Table**
+Tracks all appointments with:
+- **ID**: Unique identifier.
+- **Patient ID**: Associated patient.
+- **Date/Time**: Appointment schedule.
+- **Description**: Treatment or consultation details.
+
+---
+
+## 🤝 **Contributing**
+
+Contributions are welcome! Follow these steps to contribute:
+
+1. **Fork the Repository**.
+2. **Create a Feature Branch**:
+   ```bash
+   git checkout -b feature/YourFeatureName
+   ```
+3. **Commit Your Changes**:
+   ```bash
+   git commit -m "Add YourFeatureName"
+   ```
+4. **Push to Your Branch**:
+   ```bash
+   git push origin feature/YourFeatureName
+   ```
+5. **Open a Pull Request**.
+
+---
+
+## 📜 **License**
+
+This project is licensed under the **MIT License**. See the `LICENSE` file for full details.
+
+---
+
+## 👤 **Author**
+- **Youssef Abdelmoumene** – [GitHub Profile](https://github.com/youssefp2003)
+
+--- 
